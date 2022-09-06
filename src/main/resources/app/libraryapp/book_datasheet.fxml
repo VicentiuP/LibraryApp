@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="draggableWindow" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.libraryapp.BookDatasheetController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/background.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="600.0" prefWidth="900.0" styleClass="background_type_2" stylesheets="@../css/style.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="900.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="450.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/book_icon.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="lb_page_title" styleClass="lb_page_title" stylesheets="@../css/style.css" text="Page Title" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="450.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#closeBtnAction" prefHeight="50.0" prefWidth="100.0" styleClass="btn_type_1" text="Close" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="270.0" prefWidth="900.0">
+               <children>
+                  <AnchorPane prefHeight="270.0" prefWidth="550.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" layoutY="4.0" prefHeight="260.0" prefWidth="550.0" styleClass="hbox_under_gp" stylesheets="@../css/style.css">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <GridPane alignment="CENTER_LEFT" layoutX="14.0" layoutY="9.0" prefWidth="350.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="108.0" minWidth="85.0" prefWidth="108.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="242.0" prefWidth="242.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="ID" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Author" GridPane.rowIndex="1" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Title" GridPane.rowIndex="2" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Category" GridPane.rowIndex="3" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Publisher" GridPane.rowIndex="4" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Pages" GridPane.rowIndex="5" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Age" GridPane.rowIndex="6" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Total QTY" GridPane.rowIndex="7" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Available QTY" GridPane.rowIndex="8" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Reserved QTY" GridPane.rowIndex="9" />
+                              <Label styleClass="lb_gp_header" stylesheets="@../css/style.css" text="Lent QTY" GridPane.rowIndex="10" />
+                              <Label fx:id="gp_lb_book_id" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" />
+                              <Label fx:id="gp_lb_book_author" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="gp_lb_book_title" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="gp_lb_book_category" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="gp_lb_book_publisher" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="gp_lb_book_pages" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="gp_lb_book_age" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="gp_lb_book_total_qty" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="gp_lb_book_available_qty" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label fx:id="gp_lb_book_reserved_qty" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label fx:id="gp_lb_book_lent_qty" styleClass="lb_gp_info" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER" layoutX="378.0" layoutY="36.0" prefHeight="200.0" prefWidth="150.0">
+                           <children>
+                              <ImageView fx:id="img_cover" fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <VBox alignment="CENTER" prefHeight="270.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#acceptReservationBtnAction" prefHeight="50.0" prefWidth="170.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="Accept Reservation">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#cancelReservationBtnAction" prefHeight="50.0" prefWidth="170.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="Cancel Reservation">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#bookReturnedBtnAction" prefHeight="50.0" prefWidth="170.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="Book Returned">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="lb_message" alignment="CENTER" styleClass="lb_error_msg" stylesheets="@../css/style.css" textAlignment="CENTER" textFill="#d33a3a" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="280.0" prefWidth="900.0">
+               <children>
+                  <TableView fx:id="customersTable" prefHeight="230.0" prefWidth="700.0" styleClass="table" stylesheets="@../css/style.css">
+                    <columns>
+                        <TableColumn fx:id="column_customer_id" minWidth="100.0" prefWidth="-1.0" style="-fx-alignment: top-center;" text="Customer ID" />
+                      <TableColumn fx:id="column_first_name" minWidth="170.0" prefWidth="-1.0" text="First Name" />
+                      <TableColumn fx:id="column_last_name" minWidth="170.0" prefWidth="-1.0" text="Last Name" />
+                        <TableColumn fx:id="column_status" minWidth="150.0" prefWidth="-1.0" style="-fx-alignment: top-center;" text="Status" />
+                        <TableColumn fx:id="column_quantity" minWidth="80.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Quantity" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" right="50.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

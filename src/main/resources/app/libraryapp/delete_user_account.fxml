@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="draggableWindow" pickOnBounds="false" snapToPixel="false" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.libraryapp.DeleteUserAccountController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="150.0" prefWidth="350.0" styleClass="background_type_3" stylesheets="@../css/style.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="350.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="50.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/ask_icon.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="70.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="lb_message" styleClass="lb_question" stylesheets="@../css/style.css" text="Text Here">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="350.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#yesBtnAction" prefHeight="50.0" prefWidth="100.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="Yes">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#noBtnAction" prefHeight="50.0" prefWidth="100.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="No" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

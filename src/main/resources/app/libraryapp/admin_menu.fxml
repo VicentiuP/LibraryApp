@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.libraryapp.AdminMenuController">
+    <children>
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+            <image>
+                <Image url="@../img/background.jpg" />
+            </image>
+        </ImageView>
+        <VBox prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <HBox fx:id="draggableWindow" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0">
+                    <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="300.0">
+                            <children>
+                        <Label styleClass="lb_logo" stylesheets="@../css/style.css" text="Library App" textFill="#314a5e">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="300.0">
+                            <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#minimizeBtnAction" styleClass="btn_top_bar" stylesheets="@../css/style.css" text="_" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#exitBtnAction" styleClass="btn_top_bar" stylesheets="@../css/style.css" text="X" />
+                            </children>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </HBox>
+                    <VBox styleClass="background_type_1" stylesheets="@../css/style.css">
+                        <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="300.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icons/admin_icon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="lb_page_title" styleClass="lb_page_title" stylesheets="@../css/style.css" text="Page Title" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="300.0">
+                           <children>
+                              <Label fx:id="lb_username" styleClass="lb_username" stylesheets="@../css/style.css" text="username">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons/user_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#logOutBtnAction" prefHeight="50.0" prefWidth="100.0" styleClass="btn_type_1" stylesheets="@../css/style.css" text="Log Out" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="20.0" prefWidth="600.0">
+                     <children>
+                        <Label fx:id="lb_message" styleClass="lb_error_msg" stylesheets="@../css/style.css" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="280.0" prefWidth="600.0">
+                     <children>
+                                    <Button fx:id="btn_employees" contentDisplay="TOP" mnemonicParsing="false" onAction="#employeesBtnAction" styleClass="btn_admin_menu" stylesheets="@../css/style.css" text="Employees">
+                                        <graphic>
+                                            <ImageView fitHeight="120.0" fitWidth="120.0">
+                                                <image>
+                                                    <Image url="@../img/icons/admin_icon.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btn_customers" contentDisplay="TOP" mnemonicParsing="false" onAction="#customersBtnAction" styleClass="btn_admin_menu" stylesheets="@../css/style.css" text="Customers">
+                                        <graphic>
+                                            <ImageView fitHeight="120.0" fitWidth="120.0">
+                                                <image>
+                                                    <Image url="@../img/icons/users_icon.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btn_library" contentDisplay="TOP" mnemonicParsing="false" onAction="#libraryBtnAction" styleClass="btn_admin_menu" stylesheets="@../css/style.css" text="Library">
+                                        <graphic>
+                                            <ImageView fitHeight="120.0" fitWidth="120.0">
+                                                <image>
+                                                    <Image url="@../img/icons/library_icon.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                                    </Button>
+                     </children>
+                     <padding>
+                        <Insets top="-60.0" />
+                     </padding>
+                  </HBox>
+                        </children>
+                    </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

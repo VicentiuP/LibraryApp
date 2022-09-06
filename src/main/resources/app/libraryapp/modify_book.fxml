@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="draggableWindow" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.libraryapp.ModifyBookController">
+   <children>
+      <ImageView fitHeight="350.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/background.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="350.0" prefWidth="600.0" styleClass="background_type_2" stylesheets="@../css/style.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons/modify_icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lb_page_title" styleClass="lb_page_title" stylesheets="@../css/style.css" text="Page Title" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="lb_message" alignment="CENTER" styleClass="lb_error_msg" stylesheets="@../css/style.css" textAlignment="CENTER" textFill="#d33a3a">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" prefWidth="80.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" prefWidth="180.0" />
+                        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" prefWidth="80.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" prefWidth="180.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Author">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Title" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Category" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Publisher" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="tf_author" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="1" />
+                        <TextField fx:id="tf_title" onMouseClicked="#hideMessage" prefHeight="24.0" prefWidth="186.0" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tf_category" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="tf_publisher" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Pages" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Age+" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Quantity" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" styleClass="lb_normal_text" stylesheets="@../css/style.css" text="Cover" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="tf_pages" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="3" />
+                        <TextField fx:id="tf_age" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="tf_quantity" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="tf_cover" editable="false" maxWidth="110.0" onMouseClicked="#hideMessage" styleClass="tf_type_2" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Button fx:id="btn_browse" mnemonicParsing="false" onAction="#browseBtnAction" onMouseClicked="#hideMessage" styleClass="btn_browse" stylesheets="@../css/style.css" text="Browse" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Label styleClass="lb_normal_text" stylesheets="@../css/style.css" text="* All fields are required!" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#modifyBtnAction" prefHeight="50.0" prefWidth="100.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="Modify">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#cancelBtnAction" prefHeight="50.0" prefWidth="100.0" styleClass="btn_type_2" stylesheets="@../css/style.css" text="Cancel" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

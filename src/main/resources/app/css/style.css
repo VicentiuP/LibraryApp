@@ -1,0 +1,198 @@
+    /* Buttons */
+.btn_login_form {
+    -fx-background-color: transparent;
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.btn_login_form: hover {
+    -fx-text-fill: #677285;
+    -fx-cursor: hand;
+}
+
+.btn_top_bar {
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: white;
+    -fx-padding: 0px 10px 0px 10px;
+}
+.btn_top_bar: hover {
+    -fx-text-fill: #677285;
+    -fx-cursor: hand;
+}
+
+.btn_type_1 {
+    -fx-background-color: transparent;
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+.btn_type_1: hover {
+    -fx-text-fill: #7f8ea5;
+    -fx-font-size: 25px;
+    -fx-cursor: hand;
+}
+
+.btn_type_2 {
+    -fx-background-color: transparent;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: white;
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+}
+.btn_type_2: hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 23px;
+    -fx-cursor: hand;
+}
+
+.btn_browse {
+    -fx-background-color: transparent;
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+.btn_browse: hover {
+    -fx-text-fill: #7f8ea5;
+    -fx-font-size: 21px;
+    -fx-cursor: hand;
+}
+
+.btn_admin_menu {
+    -fx-background-color: transparent;
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+.btn_admin_menu: hover {
+    -fx-text-fill: #7f8ea5;
+    -fx-cursor: hand;
+}
+
+
+    /* Labels */
+.lb_logo {
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 40px;
+    -fx-text-fill:  #3f4652;
+}
+
+.lb_username {
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.lb_page_title {
+        -fx-font-family: "Gabriola";
+        -fx-text-fill: white;
+        -fx-font-size: 30px;
+        -fx-padding: 0px 0px 0px 10px;
+}
+
+.lb_search {
+        -fx-font-family: "Gabriola";
+        -fx-text-fill: white;
+        -fx-font-size: 25px;
+        -fx-padding: 0px 10px 0px 0px;
+}
+
+.lb_gp_header {
+    -fx-text-fill: #292e35;
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold;
+    -fx-font-size: 15px;
+}
+
+.lb_gp_info {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15px;
+    -fx-padding: 0px 0px 0px 10px;
+}
+
+.lb_normal_text {
+    -fx-font-family: "Gabriola";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.lb_error_msg {
+    -fx-background-color: rgba(255,255,255, 0.5);
+    -fx-background-radius: 3;
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 12px;
+    -fx-text-fill: #d33a3a;
+}
+
+.lb_question {
+        -fx-font-family: "Gabriola";
+        -fx-text-fill: white;
+        -fx-font-size: 27px;
+}
+
+    /* Text Fields */
+.tf_login_form {
+    -fx-background-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+}
+
+.tf_type_1 {
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: #3f4652;
+}
+
+.tf_type_2 {
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #3f4652;
+}
+
+    /* HBox */
+.hbox_under_gp {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 5px;
+    -fx-border-color: white;
+    -fx-border-radius: 5px;
+}
+
+    /* Tables */
+.table {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: white;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15px;
+    -fx-accent: rgba(127, 142, 165, 0.1);
+
+}
+
+    /* Panels */
+.background_type_1 {
+    -fx-background-color: rgba(82, 91, 106, 0.8);  /* #525b6a */
+}
+
+.background_type_2 {
+    -fx-background-color: rgba(82, 91, 106, 0.8);  /* #525b6a */
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+}
+
+.background_type_3 {
+    -fx-background-color: rgb(82, 91, 106);  /* #525b6a */
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+}
